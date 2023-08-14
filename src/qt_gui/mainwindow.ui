@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1350</width>
+    <height>930</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1350</width>
+    <height>930</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1350</width>
+    <height>930</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>511</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="openFileButton">
+       <property name="text">
+        <string>Open file</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QOpenGLWidget" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>800</width>
+      <height>800</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>500</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>File name:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_fileName">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>500</y>
+      <width>331</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>520</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Number of vertices:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_numberVertices">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>520</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>540</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Number of polygons:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_numberPolygons">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>540</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>70</y>
+      <width>511</width>
+      <height>423</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="14" column="0" colspan="2">
+      <widget class="QPushButton" name="enlargeButton">
+       <property name="text">
+        <string>Enlarge</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="2">
+      <widget class="QPushButton" name="moveZRightButton">
+       <property name="text">
+        <string>Move Z Right</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="11" column="0" colspan="2">
+      <widget class="QPushButton" name="moveZLeftButton">
+       <property name="text">
+        <string>Move Z Left</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3" rowspan="6">
+      <widget class="QDoubleSpinBox" name="moveSpinBox"/>
+     </item>
+     <item row="4" column="1">
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="13" column="0" colspan="2">
+      <widget class="QLineEdit" name="lineEdit_3">
+       <property name="text">
+        <string>Scale:</string>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="rotateXRightButton">
+       <property name="text">
+        <string>X Down</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="text">
+        <string>Rotate:</string>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="rotateYRightButton">
+       <property name="text">
+        <string>Y Left</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="rotateZRightButton">
+       <property name="text">
+        <string>Z Counterclockwise</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="2">
+      <widget class="QPushButton" name="moveYRightButton">
+       <property name="text">
+        <string>Move Y Down</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="text">
+        <string>Move:</string>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="0">
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QPushButton" name="rotateXLeftButton">
+       <property name="text">
+        <string>X Up</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="3">
+      <widget class="QDoubleSpinBox" name="scaleSpinBox"/>
+     </item>
+     <item row="10" column="0" colspan="2">
+      <widget class="QPushButton" name="moveYLeftButton">
+       <property name="text">
+        <string>Move Y Up</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="2">
+      <widget class="QPushButton" name="shrinkButton">
+       <property name="text">
+        <string>Shrink</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QPushButton" name="rotateZLeftButton">
+       <property name="text">
+        <string>Z Clockwise</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QPushButton" name="rotateYLeftButton">
+       <property name="text">
+        <string>Y Right</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" rowspan="3">
+      <widget class="QDoubleSpinBox" name="rotateSpinBox"/>
+     </item>
+     <item row="4" column="0">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="7" column="2" rowspan="3">
+      <widget class="QPushButton" name="moveXLeftButton">
+       <property name="text">
+        <string>Move X Right</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" rowspan="3" colspan="2">
+      <widget class="QPushButton" name="moveXRightButton">
+       <property name="text">
+        <string>Move X Left</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>580</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Status:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="errorDescription">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>580</y>
+      <width>331</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="projecttionComboBox">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>610</y>
+      <width>201</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Сhoose projection</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dotColorButton">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>640</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dot color</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="lineColorButton">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>670</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Line color</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="applySettingButton">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>710</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply Settings</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="dotSizeSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>650</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>1.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>10.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>5.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>650</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dot size:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>680</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>line size:</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="lineSizeSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>680</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>1.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>10.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="dotTypeComboBox">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>641</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Сhoose dot type</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="lineTypeComboBox">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>670</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Сhoose line type</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backColorButton">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>610</y>
+      <width>141</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Background color</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="screenshotButton">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>760</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Take a screenshot</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="recordGifButton">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>760</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Record GIF</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1350</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
